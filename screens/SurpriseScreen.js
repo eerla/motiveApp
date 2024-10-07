@@ -8,7 +8,6 @@ import { getMotivationalQuote } from '../services/OpenAIServices';
 const SurpriseScreen = () => {
   const [message, setMessage] = useState(''); // State for message
   const [loading, setLoading] = useState(true); // Loading state
-  console.log('inside func')
   useEffect(() => {
     const fetchMessage = async () => {
         console.log('fetchMessage invoked'); // Log when the function is called
@@ -36,7 +35,7 @@ const SurpriseScreen = () => {
 
     fetchMessage();
   }, []); // The empty array ensures this only runs on mount
-  return (
+  return
     <View style={tw`flex-1 justify-center items-center`}>
       {loading ? ( // Show loading spinner while fetching data
         <ActivityIndicator size="large" color="#0000ff" />
@@ -46,7 +45,7 @@ const SurpriseScreen = () => {
         </Text>
       )}
     </View>
-  );
+
 };
 
 export default SurpriseScreen;
